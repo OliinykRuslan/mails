@@ -1,0 +1,262 @@
+<!DOCTYPE HTML
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
+    xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="x-apple-disable-message-reformatting" />
+    <!--[if !mso]><!-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /><!--<![endif]-->
+    <!-- Your title goes here -->
+    <title>Primary inward - listings</title>
+    <!-- End title -->
+
+    <!-- Start stylesheet -->
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;680;700;800;900&display=swap');
+
+        a,
+        a[href],
+        a:hover,
+        a:link,
+        a:visited {
+            /* This is the link colour */
+            color: #0A0083;
+           font-family: 'Roboto', Helvetica, sans-serif;
+        }
+
+        p,
+        p:visited {
+            /* Fallback paragraph style */
+            font-size: 15px;
+            line-height: 24px;
+           font-family: 'Roboto', Helvetica, sans-serif;
+            font-weight: 400;
+            text-decoration: none;
+            color: #000000;
+        }
+
+        h1,
+        h2 {
+            /* Fallback heading style */
+            font-size: 22px;
+            line-height: 24px;
+           font-family: 'Roboto', Helvetica, sans-serif;
+            font-weight: normal;
+            text-decoration: none;
+            color: #000000;
+        }
+
+        span {
+           font-family: 'Roboto', Helvetica, sans-serif;
+            font-weight: normal;
+        }
+
+        .primary-btn:hover {
+            background-color: #0A0083 !important;
+            color: #fff !important;
+        }
+
+        .secondary-btn:hover {
+            background-color: #fff !important;
+            color: #EC2B00 !important;
+        }
+
+        .primary-dark-btn:hover {
+            background-color: #fff !important;
+            color: #0A0083 !important;
+        }
+
+        .text-dark {
+            color: #0A0083;
+        }
+
+        .text-light {
+            color: #94A5FF;
+        }
+
+        .bg-dark {
+            background-color: #0A0083;
+        }
+
+        .bg-light {
+            background-color: #94A5FF;
+        }
+
+
+    </style>
+    <!-- End stylesheet -->
+</head>
+
+<body
+    style="text-align: center; margin: 0; padding-bottom: 20px; padding-left: 0; padding-right: 0; -webkit-text-size-adjust: 100%; background-color: #F7F9FC; color: #000000;font-family: 'Roboto', Helvetica, sans-serif;">
+    <div style="text-align: center;">
+        <!-- Header -->
+        {{> header}}
+
+        <!-- Hero -->
+        <table align="center" style="text-align: center; vertical-align: top; width: 680px;" width="680" border="0"
+            cellspacing="0" cellpadding="0">
+            <tbody>
+                <tr>
+                    <td class="bg-dark" style="background-color: #0A0083; vertical-align: top; width: 680px;" width="680">
+                        <h1
+                            style="color: #fff; font-size: 60px; font-weight: 900; line-height: 1.2; letter-spacing: -1.8px; margin-top: 103px; margin-bottom: 81px; text-wrap: balance;">
+                            Your weekly update on homes near you</h1>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!--  Within a walk -->
+        {{#if display_listings_5}}
+        <table align="center"
+            style="background-color: #0A0083; text-align: left; vertical-align: top; width: 680px; padding-bottom: 35px;"
+            width="680" border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+                <tr>
+                    <td style="width: 680px;" width="680">
+                        <tr>
+                            <td>
+                                <p
+                                    style="text-align: center; color: #fff; font-size: 36px; font-weight: 900; line-height: 1.2; letter-spacing: -0.72px; margin-top: 0; margin-bottom: 8px;">
+                                    Within a {{max_walking_distance_mins}}-min walk
+                                </p>
+                                <p
+                                    style="text-align: center; color: #94A5FF; font-size: 24px; font-weight: 800; line-height: 1.16; letter-spacing: -0.48px; margin-top: 0; margin-bottom: 18px;">
+                                    <span style="font-weight: 800; font-style: italic;">“Basically wearing pajamas”</span>
+                                    distance
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table border="0" cellspacing="0" cellpadding="7"
+                                    style="vertical-align: top; padding: 0 34px 25px; margin-left: auto; margin-right: auto;">
+                                    <tr>
+                                        <!-- 1 -->
+                                        {{#each display_listings_5}}
+                                        
+                                            {{> listing-card-alert}}
+                            
+                                        {{/each}}
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        {{/if}}
+
+        <!--  Within a walk 2 -->
+        {{#if display_listings_10}}
+        <table align="center"
+            style="background-color: #0A0083; text-align: left; vertical-align: top; width: 680px; padding-bottom: 35px;"
+            width="680" border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+                <tr>
+                    <td style="width: 680px;" width="680">
+                        <tr>
+                            <td>
+                                <p
+                                    style="text-align: center; color: #fff; font-size: 36px; font-weight: 900; line-height: 1.2; letter-spacing: -0.72px; margin-top: 0; margin-bottom: 8px;">
+                                    Within a 10-min walk
+                                </p>
+                                <p
+                                    style="text-align: center; color: #94A5FF; font-size: 24px; font-weight: 800; line-height: 1.16; letter-spacing: -0.48px; margin-top: 0; margin-bottom: 18px;">
+                                    <span style="font-weight: 800; font-style: italic;">“Mug’s still warm when you get
+                                        there”</span> distance
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table border="0" cellspacing="0" cellpadding="7"
+                                    style="vertical-align: top; padding: 0 34px 25px; margin-left: auto; margin-right: auto;">
+                                    <tr>
+                                        <!-- 1 -->
+                                        {{#each display_listings_10}}
+                                            {{> listing-card-alert}}
+                                        {{/each}}
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        {{/if}}
+
+        <!--  Within a walk 3 -->
+        {{#if display_listings_15}}
+        <table align="center"
+            style="background-color: #0A0083; text-align: left; vertical-align: top; width: 680px; padding-bottom: 35px;"
+            width="680" border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+                <tr>
+                    <td style="width: 680px;" width="680">
+                        <tr>
+                            <td>
+                                <p
+                                    style="text-align: center; color: #fff; font-size: 36px; font-weight: 900; line-height: 1.2; letter-spacing: -0.72px; margin-top: 0; margin-bottom: 8px;">
+                                    Within a 15-min walk
+                                </p>
+                                <p
+                                    style="text-align: center; color: #94A5FF; font-size: 24px; font-weight: 800; line-height: 1.16; letter-spacing: -0.48px; margin-top: 0; margin-bottom: 18px;">
+                                    <span style="font-weight: 800; font-style: italic;">“Wanna walk the dogs?”</span> distance
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table border="0" cellspacing="0" cellpadding="7"
+                                    style="vertical-align: top; padding: 0 34px 25px; margin-left: auto; margin-right: auto;">
+                                    <tr>
+                                        <!-- 1 -->
+                                        {{#each display_listings_15}}
+                                            {{> listing-card-alert}}
+                                        {{/each}}
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        {{/if}}
+
+        <table align="center"
+            class = "bg-dark text-dark"
+            style="text-align: left; vertical-align: top; width: 680px; padding-bottom: 35px;"
+            width="680" border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+                <tr>
+                    <td align="center" style="padding-top: 0px; width: 680px;" width="680">
+                        <a href="{{dashboard_url}}" class="primary-btn text-dark"
+                            style="border: 2px solid #fff; background-color:#fff; border-radius: 1000px; padding: 12px 22px; font-size: 16px; font-weight: 700; letter-spacing: -0.32px; text-align: center; display: block; width: 198px; transition: 0.2s all; text-decoration: none;">See
+                            all {{num_homes}} listings</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Footer -->
+        {{> footer}}
+    </div>
+</body>
+
+</html>
